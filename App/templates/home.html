@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Route Master</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #f5f5f5;
+        flex-direction: column;
+        display: flex;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav li {
+        margin-left: 1rem;
+    }
+
+    nav a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('welcome.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-align: center;
+        padding: 5rem;
+    }
+
+    .welcome h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .welcome p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+
+    .features {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .features h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .features ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        list-style: none;
+    }
+
+    .features li {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        padding-left: 2rem;
+        position: relative;
+    }
+
+    .features li:before {
+        content: '✓';
+        color: #0077cc;
+        position: absolute;
+        left: 0;
+    }
+
+    .reviews {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .reviews h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    blockquote {
+        border-left: 5px solid #0077cc;
+        padding: 1rem;
+        margin: 2rem 0;
+    }
+
+    blockquote p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    blockquote cite {
+        font-size: 1rem;
+        font-style: italic;
+        margin-top: 1rem;
+        display: block;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <h1>Home</h1>
+      <nav>
+        <ul>
+          <li><a href="/signup">Signup</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="welcome">
+        <h2>Welcome to Route Master</h2>
+        <p>Finding transportation routes with ease.</p>
+      </section>
+      
+      <section class="features">
+        <h3>Our Features</h3>
+        <ul>
+          <li>Search for transportation routes.</li>
+          <li>Add your own routes</li>
+          <li>Share routes with friends</li>
+        </ul>
+      </section>
+      
+      <section class="reviews">
+        <h3>What Our Users Are Saying</h3>
+        <blockquote>
+          "Route Master has saved me so much time and hassle trying to find route options for my daily commute."
+          <cite>- Jane, New York</cite>
+        </blockquote>
+        <blockquote>
+          "I love being able to share my routes with others and help them navigate their way around the city."
+          <cite>- John, London</cite>
+        </blockquote>
+      </section>
+    </main>
+    
+    <footer>
+      <p>Copyright 2023 Lab Rats Route Master</p>
+    </footer>
+  </body>
+</html>

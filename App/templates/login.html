@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Route Master Login</title>
+	<style>
+		body {
+			background-image: url('/images/route.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+		}
+
+		.container {
+			background-color: #ffffff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			margin: 50px auto;
+			padding: 20px;
+			width: 400px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		input[type="password"] {
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			box-sizing: border-box;
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+
+        .signup {
+            background-color: #d15914; 
+            border: none;
+            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+            color: #ffffff;
+            padding: 12px 24px;
+            text-align: right;
+            text-decoration: none;
+            font-size: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .signup:hover {
+            background-color: #7d3309fa;
+        }
+
+		input[type="submit"],
+		input[type="button"] {
+			background-color: #008CBA;
+			border: none;
+			border-radius: 3px;
+			box-shadow: 0 0 3px rgba(0,0,0,0.3);
+			color: #ffffff;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 10px;
+			padding: 10px;
+			width: 100%;
+            transition: background-color 0.3s ease-in-out;
+		}
+
+		input[type="submit"]:hover,
+		input[type="button"]:hover {
+			background-color: #0077B5;
+		}
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+		.error {
+			color: #ff0000;
+			font-size: 12px;
+			margin-top: 5px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Route Master</h1>
+		<form method="post" action="">
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" required>
+
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required>
+
+			<input type="submit" value="Login" onclick="location.href='/select'">
+        </form>
+		<div class="error">
+			<!-- Display login error message here -->
+		</div>
+		<button class= signup onclick="location.href='/signup'">Sign Up</button>
+	</div>
+<footer>
+    <p>Copyright 2023 Lab Rats Route Master</p>
+</footer>
+</body>
+</html>
+

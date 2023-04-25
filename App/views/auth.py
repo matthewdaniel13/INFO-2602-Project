@@ -43,6 +43,39 @@ def logout_action():
     user = login(data['username'], data['password'])
     return 'logged out!'
 
+
+
+@auth_views.route('/login', methods = ['GET'])
+def login():
+    return render_template('login.html')
+
+@auth_views.route('/signup', methods=['GET'])
+def signup():
+    return render_template('signup.html')
+
+@auth_views.route('/signup2', methods=['GET'])
+def signup2():
+    return render_template('signup2.html')
+
+@auth_views.route('/home', methods=['GET'])
+def home():
+    return render_template('home.html')
+
+@auth_views.route('/add', methods=['GET'])
+def add():
+    return render_template('addroute.html')
+
+@auth_views.route('/search', methods=['GET'])
+def search():
+    return render_template('search.html')
+
+@auth_views.route('/share', methods=['GET'])
+def share():
+    return render_template('share.html')
+
+@auth_views.route('/select', methods=['GET'])
+def select():
+    return render_template('selectpage.html')
 '''
 API Routes
 '''

@@ -16,12 +16,13 @@ migrate = get_migrate(app)
 def initialize():
     db.drop_all()
     db.create_all()
-    create_user('bob', 'bobpass')
+    create_user('bob', 'bobpass','Bob','Pass','21 bob street', 'BobLand', 'New York', 'Untited States','bob@mail.com', '789456123')
     print('database intialized')
 
 '''
 User Commands
 '''
+
 
 # Commands can be organized using groups
 

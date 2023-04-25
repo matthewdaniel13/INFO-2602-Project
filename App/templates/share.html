@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Route Master - Share</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      border-radius: 3px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0062cc;
+    }
+    .share-icons {
+      display: flex;
+      margin-top: 20px;
+    }
+    .share-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .share-icons img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    .return-container {
+        position:absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .return-button {
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        background-color: #dc3545;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        margin-top: auto;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+    
+  <!-- Check if user is logged in and has saved routes -->
+  <!-- {% if user and saved_routes %} -->
+    <h2>Your Saved Routes</h2>
+    <ul>
+        <label for="route">Select a route to share:</label>
+      <!-- {% for route in saved_routes %} -->
+        <!-- <li>{{ route.name }}: {{ route.start }} to {{ route.end }}</li> -->
+      <!-- {% endfor %} -->
+    </ul>
+    <select id="route">
+        <option value="">-- Please select --</option>
+        <!-- {% for route in saved_routes %} -->
+            <option value="{{ route.id }}">{{ route.name }}</option>
+        <!-- {% endfor %} -->
+        </select>
+  <!-- {% endif %} -->
+  <!-- Social media sharing icons -->
+  <div class="share-icons">
+    <a href="https://www.facebook.com/" target="_blank"><img src="/images/facebook-icon.png" alt="Share on Facebook"></a>
+    <a href="https://wa.me/" target="_blank"><img src="/images/whatsapp-icon.png" alt="Share on WhatsApp"></a>
+    <a href="https://twitter.com/" target="_blank"><img src="/images/twitter-icon.png" alt="Share on Twitter"></a>
+  </div>
+</body>
+<footer>
+    <p>Copyright 2023 Lab Rats Route Master</p>
+</footer>
+</html>
